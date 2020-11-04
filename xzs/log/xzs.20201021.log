@@ -1,0 +1,270 @@
+2020-10-21 21:29:55.487  INFO 12480 --- [main] com.mindskip.xzs.XzsApplication          : Starting XzsApplication on DESKTOP-OCPEEVB with PID 12480 (started by wxj in F:\在线考试\xzs-mysql\source\xzs)
+2020-10-21 21:29:55.489  INFO 12480 --- [main] com.mindskip.xzs.XzsApplication          : The following profiles are active: dev
+2020-10-21 21:29:56.726  INFO 12480 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-10-21 21:29:56.730  INFO 12480 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-10-21 21:29:56.794  INFO 12480 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 44ms. Found 0 repository interfaces.
+2020-10-21 21:29:57.314  INFO 12480 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'cacheConfig' of type [com.mindskip.xzs.configuration.spring.cache.CacheConfig$$EnhancerBySpringCGLIB$$6bfde115] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-10-21 21:29:57.320  INFO 12480 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$92b9d0d4] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-10-21 21:29:57.776  WARN 12480 --- [main] io.undertow.websockets.jsr               : UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2020-10-21 21:29:57.798  INFO 12480 --- [main] io.undertow.servlet                      : Initializing Spring embedded WebApplicationContext
+2020-10-21 21:29:57.798  INFO 12480 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2229 ms
+2020-10-21 21:29:59.829  INFO 12480 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2bb41f5c, org.springframework.security.web.context.SecurityContextPersistenceFilter@5c6a5192, org.springframework.security.web.header.HeaderWriterFilter@235c997d, org.springframework.web.filter.CorsFilter@24c685e7, org.springframework.security.web.authentication.logout.LogoutFilter@6ad179b4, com.mindskip.xzs.configuration.spring.security.RestLoginAuthenticationFilter@311ff287, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@160b4809, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@552cede7, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@29079032, org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter@664e848c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7da635c0, org.springframework.security.web.session.SessionManagementFilter@4a9a878, org.springframework.security.web.access.ExceptionTranslationFilter@3ba1308d, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3a1f2a1]
+2020-10-21 21:30:00.736  INFO 12480 --- [main] io.lettuce.core.EpollProvider            : Starting without optional epoll library
+2020-10-21 21:30:00.737  INFO 12480 --- [main] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
+2020-10-21 21:30:01.904  INFO 12480 --- [main] s.a.ScheduledAnnotationBeanPostProcessor : No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2020-10-21 21:30:01.938  INFO 12480 --- [main] org.xnio                                 : XNIO version 3.3.8.Final
+2020-10-21 21:30:01.949  INFO 12480 --- [main] org.xnio.nio                             : XNIO NIO Implementation Version 3.3.8.Final
+2020-10-21 21:30:01.999  INFO 12480 --- [main] o.s.b.w.e.u.UndertowServletWebServer     : Undertow started on port(s) 8000 (http) with context path ''
+2020-10-21 21:30:02.001  INFO 12480 --- [main] com.mindskip.xzs.XzsApplication          : Started XzsApplication in 7.735 seconds (JVM running for 8.371)
+2020-10-21 21:31:35.309  INFO 12480 --- [XNIO-1 task-1] io.undertow.servlet                      : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-10-21 21:31:35.310  INFO 12480 --- [XNIO-1 task-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-10-21 21:31:35.328  INFO 12480 --- [XNIO-1 task-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 17 ms
+2020-10-21 21:31:35.401  INFO 12480 --- [XNIO-1 task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-10-21 21:31:35.746  INFO 12480 --- [XNIO-1 task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-10-21 21:31:35.754 DEBUG 12480 --- [XNIO-1 task-1] r.c.m.x.r.UserMapper.getUserByUserName   : ==>  Preparing: select id, user_uuid, user_name, password, real_name, age, sex, birth_day, user_level, phone, role, status, image_path, create_time, modify_time, last_active_time, deleted, wx_open_id from t_user where deleted=0 and user_name=? limit 1 
+2020-10-21 21:31:35.785 DEBUG 12480 --- [XNIO-1 task-1] r.c.m.x.r.UserMapper.getUserByUserName   : ==> Parameters: admin(String)
+2020-10-21 21:31:35.829 DEBUG 12480 --- [XNIO-1 task-1] r.c.m.x.r.UserMapper.getUserByUserName   : <==      Total: 1
+2020-10-21 21:31:42.220 DEBUG 12480 --- [XNIO-1 task-6] r.c.m.x.r.UserMapper.getUserByUserName   : ==>  Preparing: select id, user_uuid, user_name, password, real_name, age, sex, birth_day, user_level, phone, role, status, image_path, create_time, modify_time, last_active_time, deleted, wx_open_id from t_user where deleted=0 and user_name=? limit 1 
+2020-10-21 21:31:42.220 DEBUG 12480 --- [XNIO-1 task-6] r.c.m.x.r.UserMapper.getUserByUserName   : ==> Parameters: wxj(String)
+2020-10-21 21:31:42.222 DEBUG 12480 --- [XNIO-1 task-6] r.c.m.x.r.UserMapper.getUserByUserName   : <==      Total: 1
+2020-10-21 21:31:42.250 DEBUG 12480 --- [XNIO-1 task-6] r.c.m.x.r.U.insertSelective              : ==>  Preparing: insert into t_user_event_log ( user_id, user_name, real_name, content, create_time ) values ( ?, ?, ?, ?, ? ) 
+2020-10-21 21:31:42.253 DEBUG 12480 --- [XNIO-1 task-6] r.c.m.x.r.U.insertSelective              : ==> Parameters: 3(Integer), wxj(String), 吴晓洁(String), wxj 登录了小帮手(String), 2020-10-21 21:31:42.228(Timestamp)
+2020-10-21 21:31:42.263 DEBUG 12480 --- [XNIO-1 task-6] r.c.m.x.r.U.insertSelective              : <==    Updates: 1
+2020-10-21 21:31:42.327 DEBUG 12480 --- [XNIO-1 task-7] r.c.m.x.r.MessageUserMapper.unReadCount  : ==>  Preparing: select count(*) from t_message_user where readed='f' and receive_user_id = ? 
+2020-10-21 21:31:42.327 DEBUG 12480 --- [XNIO-1 task-10] r.c.m.x.r.T.getByGradeLevel              : ==>  Preparing: select id, title, grade_level, frame_text_content_id, create_user, create_time, deleted, create_user_name from t_task_exam where deleted=0 and grade_level = ? 
+2020-10-21 21:31:42.328 DEBUG 12480 --- [XNIO-1 task-7] r.c.m.x.r.MessageUserMapper.unReadCount  : ==> Parameters: 3(Integer)
+2020-10-21 21:31:42.328 DEBUG 12480 --- [XNIO-1 task-10] r.c.m.x.r.T.getByGradeLevel              : ==> Parameters: 7(Integer)
+2020-10-21 21:31:42.331 DEBUG 12480 --- [XNIO-1 task-7] r.c.m.x.r.MessageUserMapper.unReadCount  : <==      Total: 1
+2020-10-21 21:31:42.331 DEBUG 12480 --- [XNIO-1 task-10] r.c.m.x.r.T.getByGradeLevel              : <==      Total: 1
+2020-10-21 21:31:42.333 DEBUG 12480 --- [XNIO-1 task-9] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==>  Preparing: SELECT id,name,limit_start_time,limit_end_time FROM t_exam_paper WHERE deleted=0 and paper_type= ? and grade_level=? ORDER BY id desc limit 5 
+2020-10-21 21:31:42.336 DEBUG 12480 --- [XNIO-1 task-9] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==> Parameters: 1(Integer), 7(Integer)
+2020-10-21 21:31:42.337 DEBUG 12480 --- [XNIO-1 task-10] r.c.m.x.r.T.selectByTUid                 : ==>  Preparing: select id, task_exam_id, create_user, create_time, text_content_id from t_task_exam_customer_answer where create_user=? and task_exam_id in ( ? ) 
+2020-10-21 21:31:42.337 DEBUG 12480 --- [XNIO-1 task-9] r.c.m.x.r.ExamPaperMapper.indexPaper     : <==      Total: 1
+2020-10-21 21:31:42.338 DEBUG 12480 --- [XNIO-1 task-10] r.c.m.x.r.T.selectByTUid                 : ==> Parameters: 3(Integer), 2(Integer)
+2020-10-21 21:31:42.338 DEBUG 12480 --- [XNIO-1 task-9] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==>  Preparing: SELECT id,name,limit_start_time,limit_end_time FROM t_exam_paper WHERE deleted=0 and paper_type= ? and grade_level=? and ? between limit_start_time and limit_end_time ORDER BY id desc limit 5 
+2020-10-21 21:31:42.339 DEBUG 12480 --- [XNIO-1 task-9] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==> Parameters: 4(Integer), 7(Integer), 2020-10-21 21:31:42.338(Timestamp)
+2020-10-21 21:31:42.339 DEBUG 12480 --- [XNIO-1 task-10] r.c.m.x.r.T.selectByTUid                 : <==      Total: 1
+2020-10-21 21:31:42.341 DEBUG 12480 --- [XNIO-1 task-9] r.c.m.x.r.ExamPaperMapper.indexPaper     : <==      Total: 1
+2020-10-21 21:31:42.343 DEBUG 12480 --- [XNIO-1 task-10] r.c.m.x.r.T.selectByPrimaryKey           : ==>  Preparing: select id, content, create_time from t_text_content where id = ? 
+2020-10-21 21:31:42.343 DEBUG 12480 --- [XNIO-1 task-10] r.c.m.x.r.T.selectByPrimaryKey           : ==> Parameters: 6(Integer)
+2020-10-21 21:31:42.350 DEBUG 12480 --- [XNIO-1 task-10] r.c.m.x.r.T.selectByPrimaryKey           : <==      Total: 1
+2020-10-21 21:31:42.361 DEBUG 12480 --- [XNIO-1 task-10] r.c.m.x.r.T.selectByPrimaryKey           : ==>  Preparing: select id, content, create_time from t_text_content where id = ? 
+2020-10-21 21:31:42.361 DEBUG 12480 --- [XNIO-1 task-10] r.c.m.x.r.T.selectByPrimaryKey           : ==> Parameters: 7(Integer)
+2020-10-21 21:31:42.363 DEBUG 12480 --- [XNIO-1 task-10] r.c.m.x.r.T.selectByPrimaryKey           : <==      Total: 1
+2020-10-21 21:32:22.001 DEBUG 12480 --- [XNIO-1 task-13] r.c.m.x.r.U.insertSelective              : ==>  Preparing: insert into t_user_event_log ( user_id, user_name, real_name, content, create_time ) values ( ?, ?, ?, ?, ? ) 
+2020-10-21 21:32:22.003 DEBUG 12480 --- [XNIO-1 task-13] r.c.m.x.r.U.insertSelective              : ==> Parameters: 2(Integer), admin(String), 管理员(String), admin 登录了小帮手(String), 2020-10-21 21:32:22.0(Timestamp)
+2020-10-21 21:32:22.010 DEBUG 12480 --- [XNIO-1 task-13] r.c.m.x.r.U.insertSelective              : <==    Updates: 1
+2020-10-21 21:32:22.099 DEBUG 12480 --- [XNIO-1 task-14] r.c.m.x.r.E.selectAllCount               : ==>  Preparing: SELECT count(*) from t_exam_paper where deleted=0 
+2020-10-21 21:32:22.099 DEBUG 12480 --- [XNIO-1 task-14] r.c.m.x.r.E.selectAllCount               : ==> Parameters: 
+2020-10-21 21:32:22.099 DEBUG 12480 --- [XNIO-1 task-14] r.c.m.x.r.E.selectAllCount               : <==      Total: 1
+2020-10-21 21:32:22.100 DEBUG 12480 --- [XNIO-1 task-14] r.c.m.x.r.QuestionMapper.selectAllCount  : ==>  Preparing: SELECT count(*) from t_question where deleted=0 
+2020-10-21 21:32:22.100 DEBUG 12480 --- [XNIO-1 task-14] r.c.m.x.r.QuestionMapper.selectAllCount  : ==> Parameters: 
+2020-10-21 21:32:22.104 DEBUG 12480 --- [XNIO-1 task-14] r.c.m.x.r.QuestionMapper.selectAllCount  : <==      Total: 1
+2020-10-21 21:32:22.105 DEBUG 12480 --- [XNIO-1 task-14] r.c.m.x.r.E.selectAllCount               : ==>  Preparing: SELECT count(*) from t_exam_paper_answer 
+2020-10-21 21:32:22.105 DEBUG 12480 --- [XNIO-1 task-14] r.c.m.x.r.E.selectAllCount               : ==> Parameters: 
+2020-10-21 21:32:22.107 DEBUG 12480 --- [XNIO-1 task-14] r.c.m.x.r.E.selectAllCount               : <==      Total: 1
+2020-10-21 21:32:22.109 DEBUG 12480 --- [XNIO-1 task-14] r.c.m.x.r.E.selectAllCount               : ==>  Preparing: SELECT count(*) from t_exam_paper_question_customer_answer 
+2020-10-21 21:32:22.109 DEBUG 12480 --- [XNIO-1 task-14] r.c.m.x.r.E.selectAllCount               : ==> Parameters: 
+2020-10-21 21:32:22.110 DEBUG 12480 --- [XNIO-1 task-14] r.c.m.x.r.E.selectAllCount               : <==      Total: 1
+2020-10-21 21:32:22.117 DEBUG 12480 --- [XNIO-1 task-14] r.c.m.x.r.U.selectCountByDate            : ==>  Preparing: SELECT create_time as name,COUNT(create_time) as value from ( SELECT DATE_FORMAT(create_time,'%Y-%m-%d') as create_time from t_user_event_log WHERE create_time between ? and ? ) a GROUP BY create_time 
+2020-10-21 21:32:22.120 DEBUG 12480 --- [XNIO-1 task-14] r.c.m.x.r.U.selectCountByDate            : ==> Parameters: 2020-10-01 00:00:00.0(Timestamp), 2020-10-31 23:59:59.0(Timestamp)
+2020-10-21 21:32:22.127 DEBUG 12480 --- [XNIO-1 task-14] r.c.m.x.r.U.selectCountByDate            : <==      Total: 4
+2020-10-21 21:32:22.129 DEBUG 12480 --- [XNIO-1 task-14] r.c.m.x.r.E.selectCountByDate            : ==>  Preparing: SELECT create_time as name,COUNT(create_time) as value from ( SELECT DATE_FORMAT(create_time,'%Y-%m-%d') as create_time from t_exam_paper_question_customer_answer WHERE create_time between ? and ? ) a GROUP BY create_time 
+2020-10-21 21:32:22.129 DEBUG 12480 --- [XNIO-1 task-14] r.c.m.x.r.E.selectCountByDate            : ==> Parameters: 2020-10-01 00:00:00.0(Timestamp), 2020-10-31 23:59:59.0(Timestamp)
+2020-10-21 21:32:22.130 DEBUG 12480 --- [XNIO-1 task-14] r.c.m.x.r.E.selectCountByDate            : <==      Total: 3
+2020-10-21 21:32:34.145 DEBUG 12480 --- [XNIO-1 task-15] r.c.m.x.r.UserMapper.userPage_COUNT      : ==>  Preparing: SELECT count(0) FROM t_user WHERE deleted = 0 AND role = ? 
+2020-10-21 21:32:34.145 DEBUG 12480 --- [XNIO-1 task-15] r.c.m.x.r.UserMapper.userPage_COUNT      : ==> Parameters: 1(Integer)
+2020-10-21 21:32:34.147 DEBUG 12480 --- [XNIO-1 task-15] r.c.m.x.r.UserMapper.userPage_COUNT      : <==      Total: 1
+2020-10-21 21:32:34.150 DEBUG 12480 --- [XNIO-1 task-15] r.c.m.x.repository.UserMapper.userPage   : ==>  Preparing: SELECT id, user_uuid, user_name, password, real_name, age, sex, birth_day, user_level, phone, role, status, image_path, create_time, modify_time, last_active_time, deleted, wx_open_id FROM t_user WHERE deleted = 0 AND role = ? order by id desc LIMIT ? 
+2020-10-21 21:32:34.150 DEBUG 12480 --- [XNIO-1 task-15] r.c.m.x.repository.UserMapper.userPage   : ==> Parameters: 1(Integer), 10(Integer)
+2020-10-21 21:32:34.153 DEBUG 12480 --- [XNIO-1 task-15] r.c.m.x.repository.UserMapper.userPage   : <==      Total: 3
+2020-10-21 22:58:56.033  INFO 14188 --- [main] com.mindskip.xzs.XzsApplication          : Starting XzsApplication on DESKTOP-OCPEEVB with PID 14188 (started by wxj in F:\在线考试\xzs-mysql\source\xzs)
+2020-10-21 22:58:56.040  INFO 14188 --- [main] com.mindskip.xzs.XzsApplication          : The following profiles are active: dev
+2020-10-21 22:58:57.033  INFO 14188 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-10-21 22:58:57.035  INFO 14188 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-10-21 22:58:57.094  INFO 14188 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 43ms. Found 0 repository interfaces.
+2020-10-21 22:58:57.554  INFO 14188 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'cacheConfig' of type [com.mindskip.xzs.configuration.spring.cache.CacheConfig$$EnhancerBySpringCGLIB$$e123fb5f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-10-21 22:58:57.560  INFO 14188 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$7dfeb1e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-10-21 22:58:57.976  WARN 14188 --- [main] io.undertow.websockets.jsr               : UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2020-10-21 22:58:57.993  INFO 14188 --- [main] io.undertow.servlet                      : Initializing Spring embedded WebApplicationContext
+2020-10-21 22:58:57.994  INFO 14188 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1890 ms
+2020-10-21 22:58:59.821  INFO 14188 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@53aa2fc9, org.springframework.security.web.context.SecurityContextPersistenceFilter@64e7d698, org.springframework.security.web.header.HeaderWriterFilter@61191222, org.springframework.web.filter.CorsFilter@4792f119, org.springframework.security.web.authentication.logout.LogoutFilter@623e0631, com.mindskip.xzs.configuration.spring.security.RestLoginAuthenticationFilter@303c55fa, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@4e0cc334, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3f8dfe74, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@16f0ec18, org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter@4877919f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5bde57ab, org.springframework.security.web.session.SessionManagementFilter@7f3ca64a, org.springframework.security.web.access.ExceptionTranslationFilter@778a1250, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2ce03e86]
+2020-10-21 22:59:00.705  INFO 14188 --- [main] io.lettuce.core.EpollProvider            : Starting without optional epoll library
+2020-10-21 22:59:00.711  INFO 14188 --- [main] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
+2020-10-21 22:59:01.933  INFO 14188 --- [main] s.a.ScheduledAnnotationBeanPostProcessor : No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2020-10-21 22:59:01.967  INFO 14188 --- [main] org.xnio                                 : XNIO version 3.3.8.Final
+2020-10-21 22:59:01.979  INFO 14188 --- [main] org.xnio.nio                             : XNIO NIO Implementation Version 3.3.8.Final
+2020-10-21 22:59:02.097  INFO 14188 --- [main] o.s.b.w.e.u.UndertowServletWebServer     : Undertow started on port(s) 8000 (http) with context path ''
+2020-10-21 22:59:02.100  INFO 14188 --- [main] com.mindskip.xzs.XzsApplication          : Started XzsApplication in 6.517 seconds (JVM running for 7.072)
+2020-10-21 22:59:11.016  INFO 14188 --- [XNIO-1 task-1] io.undertow.servlet                      : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-10-21 22:59:11.017  INFO 14188 --- [XNIO-1 task-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-10-21 22:59:11.031  INFO 14188 --- [XNIO-1 task-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 14 ms
+2020-10-21 22:59:17.300  INFO 14188 --- [XNIO-1 task-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-10-21 22:59:17.432  INFO 14188 --- [XNIO-1 task-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-10-21 22:59:17.440 DEBUG 14188 --- [XNIO-1 task-6] r.c.m.x.r.U.insertSelective              : ==>  Preparing: insert into t_user_event_log ( user_id, user_name, real_name, content, create_time ) values ( ?, ?, ?, ?, ? ) 
+2020-10-21 22:59:17.467 DEBUG 14188 --- [XNIO-1 task-6] r.c.m.x.r.U.insertSelective              : ==> Parameters: 3(Integer), wxj(String), 吴晓洁(String), wxj 登录了小帮手(String), 2020-10-21 22:59:17.249(Timestamp)
+2020-10-21 22:59:17.475 DEBUG 14188 --- [XNIO-1 task-6] r.c.m.x.r.U.insertSelective              : <==    Updates: 1
+2020-10-21 22:59:17.577 DEBUG 14188 --- [XNIO-1 task-7] r.c.m.x.r.MessageUserMapper.unReadCount  : ==>  Preparing: select count(*) from t_message_user where readed='f' and receive_user_id = ? 
+2020-10-21 22:59:17.577 DEBUG 14188 --- [XNIO-1 task-7] r.c.m.x.r.MessageUserMapper.unReadCount  : ==> Parameters: 3(Integer)
+2020-10-21 22:59:17.576 DEBUG 14188 --- [XNIO-1 task-10] r.c.m.x.r.T.getByGradeLevel              : ==>  Preparing: select id, title, grade_level, frame_text_content_id, create_user, create_time, deleted, create_user_name from t_task_exam where deleted=0 and grade_level = ? 
+2020-10-21 22:59:17.581 DEBUG 14188 --- [XNIO-1 task-10] r.c.m.x.r.T.getByGradeLevel              : ==> Parameters: 7(Integer)
+2020-10-21 22:59:17.590 DEBUG 14188 --- [XNIO-1 task-9] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==>  Preparing: SELECT id,name,limit_start_time,limit_end_time FROM t_exam_paper WHERE deleted=0 and paper_type= ? and grade_level=? ORDER BY id desc limit 5 
+2020-10-21 22:59:17.592 DEBUG 14188 --- [XNIO-1 task-9] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==> Parameters: 1(Integer), 7(Integer)
+2020-10-21 22:59:17.599 DEBUG 14188 --- [XNIO-1 task-7] r.c.m.x.r.MessageUserMapper.unReadCount  : <==      Total: 1
+2020-10-21 22:59:17.600 DEBUG 14188 --- [XNIO-1 task-10] r.c.m.x.r.T.getByGradeLevel              : <==      Total: 1
+2020-10-21 22:59:17.601 DEBUG 14188 --- [XNIO-1 task-9] r.c.m.x.r.ExamPaperMapper.indexPaper     : <==      Total: 1
+2020-10-21 22:59:17.603 DEBUG 14188 --- [XNIO-1 task-9] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==>  Preparing: SELECT id,name,limit_start_time,limit_end_time FROM t_exam_paper WHERE deleted=0 and paper_type= ? and grade_level=? and ? between limit_start_time and limit_end_time ORDER BY id desc limit 5 
+2020-10-21 22:59:17.603 DEBUG 14188 --- [XNIO-1 task-9] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==> Parameters: 4(Integer), 7(Integer), 2020-10-21 22:59:17.602(Timestamp)
+2020-10-21 22:59:17.607 DEBUG 14188 --- [XNIO-1 task-9] r.c.m.x.r.ExamPaperMapper.indexPaper     : <==      Total: 1
+2020-10-21 22:59:17.611 DEBUG 14188 --- [XNIO-1 task-10] r.c.m.x.r.T.selectByTUid                 : ==>  Preparing: select id, task_exam_id, create_user, create_time, text_content_id from t_task_exam_customer_answer where create_user=? and task_exam_id in ( ? ) 
+2020-10-21 22:59:17.611 DEBUG 14188 --- [XNIO-1 task-10] r.c.m.x.r.T.selectByTUid                 : ==> Parameters: 3(Integer), 2(Integer)
+2020-10-21 22:59:17.613 DEBUG 14188 --- [XNIO-1 task-10] r.c.m.x.r.T.selectByTUid                 : <==      Total: 1
+2020-10-21 23:00:50.825 DEBUG 14188 --- [XNIO-1 task-54] r.c.m.x.r.U.insertSelective              : ==>  Preparing: insert into t_user_event_log ( user_id, user_name, real_name, content, create_time ) values ( ?, ?, ?, ?, ? ) 
+2020-10-21 23:00:50.826 DEBUG 14188 --- [XNIO-1 task-54] r.c.m.x.r.U.insertSelective              : ==> Parameters: 3(Integer), wxj(String), 吴晓洁(String), wxj 登录了小帮手(String), 2020-10-21 23:00:50.823(Timestamp)
+2020-10-21 23:00:50.834 DEBUG 14188 --- [XNIO-1 task-54] r.c.m.x.r.U.insertSelective              : <==    Updates: 1
+2020-10-21 23:00:50.867 DEBUG 14188 --- [XNIO-1 task-55] r.c.m.x.r.MessageUserMapper.unReadCount  : ==>  Preparing: select count(*) from t_message_user where readed='f' and receive_user_id = ? 
+2020-10-21 23:00:50.869 DEBUG 14188 --- [XNIO-1 task-55] r.c.m.x.r.MessageUserMapper.unReadCount  : ==> Parameters: 3(Integer)
+2020-10-21 23:00:50.870 DEBUG 14188 --- [XNIO-1 task-55] r.c.m.x.r.MessageUserMapper.unReadCount  : <==      Total: 1
+2020-10-21 23:00:50.870 DEBUG 14188 --- [XNIO-1 task-57] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==>  Preparing: SELECT id,name,limit_start_time,limit_end_time FROM t_exam_paper WHERE deleted=0 and paper_type= ? and grade_level=? ORDER BY id desc limit 5 
+2020-10-21 23:00:50.871 DEBUG 14188 --- [XNIO-1 task-57] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==> Parameters: 1(Integer), 7(Integer)
+2020-10-21 23:00:50.872 DEBUG 14188 --- [XNIO-1 task-57] r.c.m.x.r.ExamPaperMapper.indexPaper     : <==      Total: 1
+2020-10-21 23:00:50.874 DEBUG 14188 --- [XNIO-1 task-57] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==>  Preparing: SELECT id,name,limit_start_time,limit_end_time FROM t_exam_paper WHERE deleted=0 and paper_type= ? and grade_level=? and ? between limit_start_time and limit_end_time ORDER BY id desc limit 5 
+2020-10-21 23:00:50.877 DEBUG 14188 --- [XNIO-1 task-57] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==> Parameters: 4(Integer), 7(Integer), 2020-10-21 23:00:50.873(Timestamp)
+2020-10-21 23:00:50.878 DEBUG 14188 --- [XNIO-1 task-58] r.c.m.x.r.T.getByGradeLevel              : ==>  Preparing: select id, title, grade_level, frame_text_content_id, create_user, create_time, deleted, create_user_name from t_task_exam where deleted=0 and grade_level = ? 
+2020-10-21 23:00:50.879 DEBUG 14188 --- [XNIO-1 task-57] r.c.m.x.r.ExamPaperMapper.indexPaper     : <==      Total: 1
+2020-10-21 23:00:50.879 DEBUG 14188 --- [XNIO-1 task-58] r.c.m.x.r.T.getByGradeLevel              : ==> Parameters: 7(Integer)
+2020-10-21 23:00:50.883 DEBUG 14188 --- [XNIO-1 task-58] r.c.m.x.r.T.getByGradeLevel              : <==      Total: 1
+2020-10-21 23:00:50.886 DEBUG 14188 --- [XNIO-1 task-58] r.c.m.x.r.T.selectByTUid                 : ==>  Preparing: select id, task_exam_id, create_user, create_time, text_content_id from t_task_exam_customer_answer where create_user=? and task_exam_id in ( ? ) 
+2020-10-21 23:00:50.887 DEBUG 14188 --- [XNIO-1 task-58] r.c.m.x.r.T.selectByTUid                 : ==> Parameters: 3(Integer), 2(Integer)
+2020-10-21 23:00:50.888 DEBUG 14188 --- [XNIO-1 task-58] r.c.m.x.r.T.selectByTUid                 : <==      Total: 1
+2020-10-21 23:01:46.515 DEBUG 14188 --- [XNIO-1 task-62] r.c.m.x.r.U.insertSelective              : ==>  Preparing: insert into t_user_event_log ( user_id, user_name, real_name, content, create_time ) values ( ?, ?, ?, ?, ? ) 
+2020-10-21 23:01:46.516 DEBUG 14188 --- [XNIO-1 task-62] r.c.m.x.r.U.insertSelective              : ==> Parameters: 2(Integer), admin(String), 管理员(String), admin 登录了小帮手(String), 2020-10-21 23:01:46.515(Timestamp)
+2020-10-21 23:01:46.523 DEBUG 14188 --- [XNIO-1 task-62] r.c.m.x.r.U.insertSelective              : <==    Updates: 1
+2020-10-21 23:01:46.598 DEBUG 14188 --- [XNIO-1 task-63] r.c.m.x.r.E.selectAllCount               : ==>  Preparing: SELECT count(*) from t_exam_paper where deleted=0 
+2020-10-21 23:01:46.599 DEBUG 14188 --- [XNIO-1 task-63] r.c.m.x.r.E.selectAllCount               : ==> Parameters: 
+2020-10-21 23:01:46.600 DEBUG 14188 --- [XNIO-1 task-63] r.c.m.x.r.E.selectAllCount               : <==      Total: 1
+2020-10-21 23:01:46.600 DEBUG 14188 --- [XNIO-1 task-63] r.c.m.x.r.QuestionMapper.selectAllCount  : ==>  Preparing: SELECT count(*) from t_question where deleted=0 
+2020-10-21 23:01:46.601 DEBUG 14188 --- [XNIO-1 task-63] r.c.m.x.r.QuestionMapper.selectAllCount  : ==> Parameters: 
+2020-10-21 23:01:46.602 DEBUG 14188 --- [XNIO-1 task-63] r.c.m.x.r.QuestionMapper.selectAllCount  : <==      Total: 1
+2020-10-21 23:01:46.603 DEBUG 14188 --- [XNIO-1 task-63] r.c.m.x.r.E.selectAllCount               : ==>  Preparing: SELECT count(*) from t_exam_paper_answer 
+2020-10-21 23:01:46.603 DEBUG 14188 --- [XNIO-1 task-63] r.c.m.x.r.E.selectAllCount               : ==> Parameters: 
+2020-10-21 23:01:46.605 DEBUG 14188 --- [XNIO-1 task-63] r.c.m.x.r.E.selectAllCount               : <==      Total: 1
+2020-10-21 23:01:46.607 DEBUG 14188 --- [XNIO-1 task-63] r.c.m.x.r.E.selectAllCount               : ==>  Preparing: SELECT count(*) from t_exam_paper_question_customer_answer 
+2020-10-21 23:01:46.608 DEBUG 14188 --- [XNIO-1 task-63] r.c.m.x.r.E.selectAllCount               : ==> Parameters: 
+2020-10-21 23:01:46.609 DEBUG 14188 --- [XNIO-1 task-63] r.c.m.x.r.E.selectAllCount               : <==      Total: 1
+2020-10-21 23:01:46.611 DEBUG 14188 --- [XNIO-1 task-63] r.c.m.x.r.U.selectCountByDate            : ==>  Preparing: SELECT create_time as name,COUNT(create_time) as value from ( SELECT DATE_FORMAT(create_time,'%Y-%m-%d') as create_time from t_user_event_log WHERE create_time between ? and ? ) a GROUP BY create_time 
+2020-10-21 23:01:46.611 DEBUG 14188 --- [XNIO-1 task-63] r.c.m.x.r.U.selectCountByDate            : ==> Parameters: 2020-10-01 00:00:00.0(Timestamp), 2020-10-31 23:59:59.0(Timestamp)
+2020-10-21 23:01:46.613 DEBUG 14188 --- [XNIO-1 task-63] r.c.m.x.r.U.selectCountByDate            : <==      Total: 4
+2020-10-21 23:01:46.615 DEBUG 14188 --- [XNIO-1 task-63] r.c.m.x.r.E.selectCountByDate            : ==>  Preparing: SELECT create_time as name,COUNT(create_time) as value from ( SELECT DATE_FORMAT(create_time,'%Y-%m-%d') as create_time from t_exam_paper_question_customer_answer WHERE create_time between ? and ? ) a GROUP BY create_time 
+2020-10-21 23:01:46.615 DEBUG 14188 --- [XNIO-1 task-63] r.c.m.x.r.E.selectCountByDate            : ==> Parameters: 2020-10-01 00:00:00.0(Timestamp), 2020-10-31 23:59:59.0(Timestamp)
+2020-10-21 23:01:46.616 DEBUG 14188 --- [XNIO-1 task-63] r.c.m.x.r.E.selectCountByDate            : <==      Total: 3
+2020-10-21 23:24:43.807  INFO 3196 --- [main] com.mindskip.xzs.XzsApplication          : Starting XzsApplication on DESKTOP-OCPEEVB with PID 3196 (started by wxj in F:\在线考试\xzs-mysql\source\xzs)
+2020-10-21 23:24:43.809  INFO 3196 --- [main] com.mindskip.xzs.XzsApplication          : The following profiles are active: dev
+2020-10-21 23:24:44.943  INFO 3196 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-10-21 23:24:44.945  INFO 3196 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-10-21 23:24:44.997  INFO 3196 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 39ms. Found 0 repository interfaces.
+2020-10-21 23:24:45.417  INFO 3196 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'cacheConfig' of type [com.mindskip.xzs.configuration.spring.cache.CacheConfig$$EnhancerBySpringCGLIB$$889d183f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-10-21 23:24:45.421  INFO 3196 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$af5907fe] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-10-21 23:24:45.804  WARN 3196 --- [main] io.undertow.websockets.jsr               : UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2020-10-21 23:24:45.824  INFO 3196 --- [main] io.undertow.servlet                      : Initializing Spring embedded WebApplicationContext
+2020-10-21 23:24:45.824  INFO 3196 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1952 ms
+2020-10-21 23:24:47.722  INFO 3196 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2401856, org.springframework.security.web.context.SecurityContextPersistenceFilter@543d5863, org.springframework.security.web.header.HeaderWriterFilter@66e21568, org.springframework.web.filter.CorsFilter@6d6f6860, org.springframework.security.web.authentication.logout.LogoutFilter@114a5e0, com.mindskip.xzs.configuration.spring.security.RestLoginAuthenticationFilter@1cfc2538, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@5fdfe8cf, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@dd3f8aa, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@160b4809, org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter@4e8b357d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2a4f8009, org.springframework.security.web.session.SessionManagementFilter@611b35d6, org.springframework.security.web.access.ExceptionTranslationFilter@ee21292, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6e02721d]
+2020-10-21 23:24:48.264  INFO 3196 --- [main] io.lettuce.core.EpollProvider            : Starting without optional epoll library
+2020-10-21 23:24:48.266  INFO 3196 --- [main] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
+2020-10-21 23:24:49.367  INFO 3196 --- [main] s.a.ScheduledAnnotationBeanPostProcessor : No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2020-10-21 23:24:49.393  INFO 3196 --- [main] org.xnio                                 : XNIO version 3.3.8.Final
+2020-10-21 23:24:49.401  INFO 3196 --- [main] org.xnio.nio                             : XNIO NIO Implementation Version 3.3.8.Final
+2020-10-21 23:24:49.466  INFO 3196 --- [main] o.s.b.w.e.u.UndertowServletWebServer     : Undertow started on port(s) 8000 (http) with context path ''
+2020-10-21 23:24:49.473  INFO 3196 --- [main] com.mindskip.xzs.XzsApplication          : Started XzsApplication in 6.081 seconds (JVM running for 6.59)
+2020-10-21 23:24:54.105  INFO 3196 --- [XNIO-1 task-1] io.undertow.servlet                      : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-10-21 23:24:54.105  INFO 3196 --- [XNIO-1 task-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-10-21 23:24:54.116  INFO 3196 --- [XNIO-1 task-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 11 ms
+2020-10-21 23:25:00.473  INFO 3196 --- [XNIO-1 task-44] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-10-21 23:25:00.845  INFO 3196 --- [XNIO-1 task-44] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-10-21 23:25:00.861 DEBUG 3196 --- [XNIO-1 task-44] r.c.m.x.r.U.insertSelective              : ==>  Preparing: insert into t_user_event_log ( user_id, user_name, real_name, content, create_time ) values ( ?, ?, ?, ?, ? ) 
+2020-10-21 23:25:00.928 DEBUG 3196 --- [XNIO-1 task-44] r.c.m.x.r.U.insertSelective              : ==> Parameters: 3(Integer), wxj(String), 吴晓洁(String), wxj 登录了小帮手(String), 2020-10-21 23:25:00.414(Timestamp)
+2020-10-21 23:25:00.943 DEBUG 3196 --- [XNIO-1 task-44] r.c.m.x.r.U.insertSelective              : <==    Updates: 1
+2020-10-21 23:25:01.119 DEBUG 3196 --- [XNIO-1 task-48] r.c.m.x.r.T.getByGradeLevel              : ==>  Preparing: select id, title, grade_level, frame_text_content_id, create_user, create_time, deleted, create_user_name from t_task_exam where deleted=0 and grade_level = ? 
+2020-10-21 23:25:01.119 DEBUG 3196 --- [XNIO-1 task-45] r.c.m.x.r.MessageUserMapper.unReadCount  : ==>  Preparing: select count(*) from t_message_user where readed='f' and receive_user_id = ? 
+2020-10-21 23:25:01.120 DEBUG 3196 --- [XNIO-1 task-45] r.c.m.x.r.MessageUserMapper.unReadCount  : ==> Parameters: 3(Integer)
+2020-10-21 23:25:01.120 DEBUG 3196 --- [XNIO-1 task-48] r.c.m.x.r.T.getByGradeLevel              : ==> Parameters: 7(Integer)
+2020-10-21 23:25:01.130 DEBUG 3196 --- [XNIO-1 task-47] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==>  Preparing: SELECT id,name,limit_start_time,limit_end_time FROM t_exam_paper WHERE deleted=0 and paper_type= ? and grade_level=? ORDER BY id desc limit 5 
+2020-10-21 23:25:01.131 DEBUG 3196 --- [XNIO-1 task-47] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==> Parameters: 1(Integer), 7(Integer)
+2020-10-21 23:25:01.148 DEBUG 3196 --- [XNIO-1 task-47] r.c.m.x.r.ExamPaperMapper.indexPaper     : <==      Total: 1
+2020-10-21 23:25:01.148 DEBUG 3196 --- [XNIO-1 task-45] r.c.m.x.r.MessageUserMapper.unReadCount  : <==      Total: 1
+2020-10-21 23:25:01.149 DEBUG 3196 --- [XNIO-1 task-48] r.c.m.x.r.T.getByGradeLevel              : <==      Total: 1
+2020-10-21 23:25:01.150 DEBUG 3196 --- [XNIO-1 task-47] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==>  Preparing: SELECT id,name,limit_start_time,limit_end_time FROM t_exam_paper WHERE deleted=0 and paper_type= ? and grade_level=? and ? between limit_start_time and limit_end_time ORDER BY id desc limit 5 
+2020-10-21 23:25:01.150 DEBUG 3196 --- [XNIO-1 task-47] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==> Parameters: 4(Integer), 7(Integer), 2020-10-21 23:25:01.149(Timestamp)
+2020-10-21 23:25:01.152 DEBUG 3196 --- [XNIO-1 task-47] r.c.m.x.r.ExamPaperMapper.indexPaper     : <==      Total: 1
+2020-10-21 23:25:01.156 DEBUG 3196 --- [XNIO-1 task-48] r.c.m.x.r.T.selectByTUid                 : ==>  Preparing: select id, task_exam_id, create_user, create_time, text_content_id from t_task_exam_customer_answer where create_user=? and task_exam_id in ( ? ) 
+2020-10-21 23:25:01.157 DEBUG 3196 --- [XNIO-1 task-48] r.c.m.x.r.T.selectByTUid                 : ==> Parameters: 3(Integer), 2(Integer)
+2020-10-21 23:25:01.159 DEBUG 3196 --- [XNIO-1 task-48] r.c.m.x.r.T.selectByTUid                 : <==      Total: 1
+2020-10-21 23:37:22.669 DEBUG 3196 --- [XNIO-1 task-93] r.c.m.x.r.U.insertSelective              : ==>  Preparing: insert into t_user_event_log ( user_id, user_name, real_name, content, create_time ) values ( ?, ?, ?, ?, ? ) 
+2020-10-21 23:37:22.670 DEBUG 3196 --- [XNIO-1 task-93] r.c.m.x.r.U.insertSelective              : ==> Parameters: 3(Integer), wxj(String), 吴晓洁(String), wxj 登录了小帮手(String), 2020-10-21 23:37:22.668(Timestamp)
+2020-10-21 23:37:22.678 DEBUG 3196 --- [XNIO-1 task-93] r.c.m.x.r.U.insertSelective              : <==    Updates: 1
+2020-10-21 23:37:22.709 DEBUG 3196 --- [XNIO-1 task-94] r.c.m.x.r.MessageUserMapper.unReadCount  : ==>  Preparing: select count(*) from t_message_user where readed='f' and receive_user_id = ? 
+2020-10-21 23:37:22.710 DEBUG 3196 --- [XNIO-1 task-94] r.c.m.x.r.MessageUserMapper.unReadCount  : ==> Parameters: 3(Integer)
+2020-10-21 23:37:22.713 DEBUG 3196 --- [XNIO-1 task-94] r.c.m.x.r.MessageUserMapper.unReadCount  : <==      Total: 1
+2020-10-21 23:37:22.714 DEBUG 3196 --- [XNIO-1 task-96] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==>  Preparing: SELECT id,name,limit_start_time,limit_end_time FROM t_exam_paper WHERE deleted=0 and paper_type= ? and grade_level=? ORDER BY id desc limit 5 
+2020-10-21 23:37:22.715 DEBUG 3196 --- [XNIO-1 task-96] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==> Parameters: 1(Integer), 7(Integer)
+2020-10-21 23:37:22.720 DEBUG 3196 --- [XNIO-1 task-96] r.c.m.x.r.ExamPaperMapper.indexPaper     : <==      Total: 1
+2020-10-21 23:37:22.721 DEBUG 3196 --- [XNIO-1 task-97] r.c.m.x.r.T.getByGradeLevel              : ==>  Preparing: select id, title, grade_level, frame_text_content_id, create_user, create_time, deleted, create_user_name from t_task_exam where deleted=0 and grade_level = ? 
+2020-10-21 23:37:22.721 DEBUG 3196 --- [XNIO-1 task-97] r.c.m.x.r.T.getByGradeLevel              : ==> Parameters: 7(Integer)
+2020-10-21 23:37:22.722 DEBUG 3196 --- [XNIO-1 task-96] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==>  Preparing: SELECT id,name,limit_start_time,limit_end_time FROM t_exam_paper WHERE deleted=0 and paper_type= ? and grade_level=? and ? between limit_start_time and limit_end_time ORDER BY id desc limit 5 
+2020-10-21 23:37:22.724 DEBUG 3196 --- [XNIO-1 task-97] r.c.m.x.r.T.getByGradeLevel              : <==      Total: 1
+2020-10-21 23:37:22.724 DEBUG 3196 --- [XNIO-1 task-96] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==> Parameters: 4(Integer), 7(Integer), 2020-10-21 23:37:22.721(Timestamp)
+2020-10-21 23:37:22.725 DEBUG 3196 --- [XNIO-1 task-97] r.c.m.x.r.T.selectByTUid                 : ==>  Preparing: select id, task_exam_id, create_user, create_time, text_content_id from t_task_exam_customer_answer where create_user=? and task_exam_id in ( ? ) 
+2020-10-21 23:37:22.726 DEBUG 3196 --- [XNIO-1 task-97] r.c.m.x.r.T.selectByTUid                 : ==> Parameters: 3(Integer), 2(Integer)
+2020-10-21 23:37:22.726 DEBUG 3196 --- [XNIO-1 task-96] r.c.m.x.r.ExamPaperMapper.indexPaper     : <==      Total: 1
+2020-10-21 23:37:22.728 DEBUG 3196 --- [XNIO-1 task-97] r.c.m.x.r.T.selectByTUid                 : <==      Total: 1
+2020-10-21 23:37:45.163 DEBUG 3196 --- [XNIO-1 task-154] r.c.m.x.r.U.insertSelective              : ==>  Preparing: insert into t_user_event_log ( user_id, user_name, real_name, content, create_time ) values ( ?, ?, ?, ?, ? ) 
+2020-10-21 23:37:45.164 DEBUG 3196 --- [XNIO-1 task-154] r.c.m.x.r.U.insertSelective              : ==> Parameters: 2(Integer), admin(String), 管理员(String), admin 登录了小帮手(String), 2020-10-21 23:37:45.163(Timestamp)
+2020-10-21 23:37:45.171 DEBUG 3196 --- [XNIO-1 task-154] r.c.m.x.r.U.insertSelective              : <==    Updates: 1
+2020-10-21 23:37:45.236 DEBUG 3196 --- [XNIO-1 task-155] r.c.m.x.r.E.selectAllCount               : ==>  Preparing: SELECT count(*) from t_exam_paper where deleted=0 
+2020-10-21 23:37:45.236 DEBUG 3196 --- [XNIO-1 task-155] r.c.m.x.r.E.selectAllCount               : ==> Parameters: 
+2020-10-21 23:37:45.237 DEBUG 3196 --- [XNIO-1 task-155] r.c.m.x.r.E.selectAllCount               : <==      Total: 1
+2020-10-21 23:37:45.238 DEBUG 3196 --- [XNIO-1 task-155] r.c.m.x.r.QuestionMapper.selectAllCount  : ==>  Preparing: SELECT count(*) from t_question where deleted=0 
+2020-10-21 23:37:45.238 DEBUG 3196 --- [XNIO-1 task-155] r.c.m.x.r.QuestionMapper.selectAllCount  : ==> Parameters: 
+2020-10-21 23:37:45.239 DEBUG 3196 --- [XNIO-1 task-155] r.c.m.x.r.QuestionMapper.selectAllCount  : <==      Total: 1
+2020-10-21 23:37:45.240 DEBUG 3196 --- [XNIO-1 task-155] r.c.m.x.r.E.selectAllCount               : ==>  Preparing: SELECT count(*) from t_exam_paper_answer 
+2020-10-21 23:37:45.241 DEBUG 3196 --- [XNIO-1 task-155] r.c.m.x.r.E.selectAllCount               : ==> Parameters: 
+2020-10-21 23:37:45.242 DEBUG 3196 --- [XNIO-1 task-155] r.c.m.x.r.E.selectAllCount               : <==      Total: 1
+2020-10-21 23:37:45.243 DEBUG 3196 --- [XNIO-1 task-155] r.c.m.x.r.E.selectAllCount               : ==>  Preparing: SELECT count(*) from t_exam_paper_question_customer_answer 
+2020-10-21 23:37:45.244 DEBUG 3196 --- [XNIO-1 task-155] r.c.m.x.r.E.selectAllCount               : ==> Parameters: 
+2020-10-21 23:37:45.245 DEBUG 3196 --- [XNIO-1 task-155] r.c.m.x.r.E.selectAllCount               : <==      Total: 1
+2020-10-21 23:37:45.247 DEBUG 3196 --- [XNIO-1 task-155] r.c.m.x.r.U.selectCountByDate            : ==>  Preparing: SELECT create_time as name,COUNT(create_time) as value from ( SELECT DATE_FORMAT(create_time,'%Y-%m-%d') as create_time from t_user_event_log WHERE create_time between ? and ? ) a GROUP BY create_time 
+2020-10-21 23:37:45.248 DEBUG 3196 --- [XNIO-1 task-155] r.c.m.x.r.U.selectCountByDate            : ==> Parameters: 2020-10-01 00:00:00.0(Timestamp), 2020-10-31 23:59:59.0(Timestamp)
+2020-10-21 23:37:45.250 DEBUG 3196 --- [XNIO-1 task-155] r.c.m.x.r.U.selectCountByDate            : <==      Total: 4
+2020-10-21 23:37:45.253 DEBUG 3196 --- [XNIO-1 task-155] r.c.m.x.r.E.selectCountByDate            : ==>  Preparing: SELECT create_time as name,COUNT(create_time) as value from ( SELECT DATE_FORMAT(create_time,'%Y-%m-%d') as create_time from t_exam_paper_question_customer_answer WHERE create_time between ? and ? ) a GROUP BY create_time 
+2020-10-21 23:37:45.253 DEBUG 3196 --- [XNIO-1 task-155] r.c.m.x.r.E.selectCountByDate            : ==> Parameters: 2020-10-01 00:00:00.0(Timestamp), 2020-10-31 23:59:59.0(Timestamp)
+2020-10-21 23:37:45.254 DEBUG 3196 --- [XNIO-1 task-155] r.c.m.x.r.E.selectCountByDate            : <==      Total: 3
+2020-10-21 23:38:21.291 DEBUG 3196 --- [XNIO-1 task-158] r.c.m.x.r.U.insertSelective              : ==>  Preparing: insert into t_user_event_log ( user_id, user_name, real_name, content, create_time ) values ( ?, ?, ?, ?, ? ) 
+2020-10-21 23:38:21.292 DEBUG 3196 --- [XNIO-1 task-158] r.c.m.x.r.U.insertSelective              : ==> Parameters: 3(Integer), wxj(String), 吴晓洁(String), wxj 登录了小帮手(String), 2020-10-21 23:38:21.291(Timestamp)
+2020-10-21 23:38:21.299 DEBUG 3196 --- [XNIO-1 task-158] r.c.m.x.r.U.insertSelective              : <==    Updates: 1
+2020-10-21 23:38:21.331 DEBUG 3196 --- [XNIO-1 task-159] r.c.m.x.r.MessageUserMapper.unReadCount  : ==>  Preparing: select count(*) from t_message_user where readed='f' and receive_user_id = ? 
+2020-10-21 23:38:21.332 DEBUG 3196 --- [XNIO-1 task-159] r.c.m.x.r.MessageUserMapper.unReadCount  : ==> Parameters: 3(Integer)
+2020-10-21 23:38:21.333 DEBUG 3196 --- [XNIO-1 task-159] r.c.m.x.r.MessageUserMapper.unReadCount  : <==      Total: 1
+2020-10-21 23:38:21.335 DEBUG 3196 --- [XNIO-1 task-161] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==>  Preparing: SELECT id,name,limit_start_time,limit_end_time FROM t_exam_paper WHERE deleted=0 and paper_type= ? and grade_level=? ORDER BY id desc limit 5 
+2020-10-21 23:38:21.337 DEBUG 3196 --- [XNIO-1 task-161] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==> Parameters: 1(Integer), 7(Integer)
+2020-10-21 23:38:21.338 DEBUG 3196 --- [XNIO-1 task-162] r.c.m.x.r.T.getByGradeLevel              : ==>  Preparing: select id, title, grade_level, frame_text_content_id, create_user, create_time, deleted, create_user_name from t_task_exam where deleted=0 and grade_level = ? 
+2020-10-21 23:38:21.339 DEBUG 3196 --- [XNIO-1 task-162] r.c.m.x.r.T.getByGradeLevel              : ==> Parameters: 7(Integer)
+2020-10-21 23:38:21.340 DEBUG 3196 --- [XNIO-1 task-161] r.c.m.x.r.ExamPaperMapper.indexPaper     : <==      Total: 1
+2020-10-21 23:38:21.341 DEBUG 3196 --- [XNIO-1 task-162] r.c.m.x.r.T.getByGradeLevel              : <==      Total: 1
+2020-10-21 23:38:21.341 DEBUG 3196 --- [XNIO-1 task-161] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==>  Preparing: SELECT id,name,limit_start_time,limit_end_time FROM t_exam_paper WHERE deleted=0 and paper_type= ? and grade_level=? and ? between limit_start_time and limit_end_time ORDER BY id desc limit 5 
+2020-10-21 23:38:21.342 DEBUG 3196 --- [XNIO-1 task-162] r.c.m.x.r.T.selectByTUid                 : ==>  Preparing: select id, task_exam_id, create_user, create_time, text_content_id from t_task_exam_customer_answer where create_user=? and task_exam_id in ( ? ) 
+2020-10-21 23:38:21.342 DEBUG 3196 --- [XNIO-1 task-162] r.c.m.x.r.T.selectByTUid                 : ==> Parameters: 3(Integer), 2(Integer)
+2020-10-21 23:38:21.342 DEBUG 3196 --- [XNIO-1 task-161] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==> Parameters: 4(Integer), 7(Integer), 2020-10-21 23:38:21.341(Timestamp)
+2020-10-21 23:38:21.344 DEBUG 3196 --- [XNIO-1 task-162] r.c.m.x.r.T.selectByTUid                 : <==      Total: 1
+2020-10-21 23:38:21.344 DEBUG 3196 --- [XNIO-1 task-161] r.c.m.x.r.ExamPaperMapper.indexPaper     : <==      Total: 1
+2020-10-21 23:38:24.863 DEBUG 3196 --- [XNIO-1 task-163] r.c.m.x.r.U.getUserEventLogByUserId      : ==>  Preparing: select id, user_id, user_name, real_name, content, create_time from t_user_event_log where user_id=? order by id desc limit 10 
+2020-10-21 23:38:24.864 DEBUG 3196 --- [XNIO-1 task-163] r.c.m.x.r.U.getUserEventLogByUserId      : ==> Parameters: 3(Integer)
+2020-10-21 23:38:24.868 DEBUG 3196 --- [XNIO-1 task-163] r.c.m.x.r.U.getUserEventLogByUserId      : <==      Total: 10
+2020-10-21 23:38:33.808 DEBUG 3196 --- [XNIO-1 task-165] r.c.m.x.r.M.studentPage_COUNT            : ==>  Preparing: SELECT count(0) FROM t_message_user WHERE receive_user_id = ? 
+2020-10-21 23:38:33.808 DEBUG 3196 --- [XNIO-1 task-165] r.c.m.x.r.M.studentPage_COUNT            : ==> Parameters: 3(Integer)
+2020-10-21 23:38:33.809 DEBUG 3196 --- [XNIO-1 task-165] r.c.m.x.r.M.studentPage_COUNT            : <==      Total: 1
+2020-10-21 23:38:33.812 DEBUG 3196 --- [XNIO-1 task-165] r.c.m.x.r.MessageUserMapper.studentPage  : ==>  Preparing: SELECT id, message_id, receive_user_id, receive_user_name, receive_real_name, readed, create_time, read_time FROM t_message_user WHERE receive_user_id = ? order by id desc LIMIT ? 
+2020-10-21 23:38:33.812 DEBUG 3196 --- [XNIO-1 task-165] r.c.m.x.r.MessageUserMapper.studentPage  : ==> Parameters: 3(Integer), 10(Integer)
+2020-10-21 23:38:33.813 DEBUG 3196 --- [XNIO-1 task-165] r.c.m.x.r.MessageUserMapper.studentPage  : <==      Total: 2
+2020-10-21 23:38:33.815 DEBUG 3196 --- [XNIO-1 task-165] r.c.m.x.r.MessageMapper.selectByIds      : ==>  Preparing: select id, title, content, create_time, send_user_id, send_user_name, send_real_name, receive_user_count, read_count from t_message where id in ( ? , ? ) 
+2020-10-21 23:38:33.815 DEBUG 3196 --- [XNIO-1 task-165] r.c.m.x.r.MessageMapper.selectByIds      : ==> Parameters: 2(Integer), 1(Integer)
+2020-10-21 23:38:33.826 DEBUG 3196 --- [XNIO-1 task-165] r.c.m.x.r.MessageMapper.selectByIds      : <==      Total: 2
